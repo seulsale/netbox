@@ -221,6 +221,11 @@ class RandomAnimalView(View):
 
 This view retrieves a random animal from the database and and passes it as a context variable when rendering a template named `animal.html`, which doesn't exist yet. To create this template, first create a directory named `templates/netbox_animal_sounds/` within the plugin source directory. (We use the plugin's name as a subdirectory to guard against naming collisions with other plugins.) Then, create a template named `animal.html` as described below.
 
+::: netbox.views.generic.ObjectView
+    rendering:
+	  show_root_heading: yes
+	  show_category_heading: yes
+
 ### Extending the Base Template
 
 NetBox provides a base template to ensure a consistent user experience, which plugins can extend with their own content. This template includes four content blocks:

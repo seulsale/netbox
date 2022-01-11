@@ -34,8 +34,9 @@ class ObjectView(ObjectPermissionRequiredMixin, View):
     """
     Retrieve a single object for display.
 
-    queryset: The base queryset for retrieving the object
-    template_name: Name of the template to use
+    Attributes:
+      queryset (django.db.models.QuerySet): The base queryset for retrieving the object
+      template_name (string): Name of the template to use
     """
     queryset = None
     template_name = None
